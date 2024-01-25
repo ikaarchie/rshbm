@@ -14,7 +14,6 @@
             <li><a class="nav-link scrollto" href="#alat">Tindakan & alat</a></li>
             <li><a class="nav-link scrollto " href="#gizi">Gizi</a></li>
             <li><a class="nav-link scrollto" href="#info">Informasi lainnya</a></li>
-            <li><a class="nav-link scrollto" href="#coba">Coba</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -325,61 +324,6 @@
                     <ul class="cards swiper-wrapper">
 
                         @foreach($info as $key => $isi)
-                        <li class="swiper-slide">
-                            <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
-                                data-title="{{ $isi->judul }}" class="card">
-                                <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" />
-                                <div class="card__overlay">
-                                    <div class="card__header">
-                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                            <path />
-                                        </svg>
-                                        <img class="card__thumb" src="{{ url('img/logo.png') }}" alt="" />
-                                        <div class="card__header-text">
-                                            <h3 class="card__title">{{ $isi->judul }}</h3>
-                                            <span class="card__status">Lebih lanjut <i
-                                                    class='bx bx-chevrons-right'></i></span>
-                                        </div>
-                                    </div>
-                                    <p class="card__description">{{ $isi->deskripsi }}</p>
-                                </div>
-                            </a>
-                        </li>
-                        @endforeach
-
-                    </ul>
-                </div>
-
-                <!-- Navigation buttons -->
-                <div class="swiper-button-next">
-                    {{-- <i class='bx bxs-chevron-right'></i> --}}
-                </div>
-
-                <div class="swiper-button-prev">
-                    {{-- <i class='bx bxs-chevron-left'></i> --}}
-                </div>
-
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="coba" class="section-bg">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Coba</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
-                    inventore eveniet placeat quidem ipsam quod tempore porro autem alias eligendi eum, sequi ex.
-                    Id, pariatur quas.</p>
-            </div>
-
-            <div class="swiper">
-                <div class="card__content">
-                    <ul class="cards swiper-wrapper">
-
-                        @foreach($konten as $key => $isi)
                         <li class="swiper-slide">
                             <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
                                 data-title="{{ $isi->judul }}" class="card">
