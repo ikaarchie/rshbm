@@ -14,6 +14,7 @@
             <li><a class="nav-link scrollto" href="#alat">Tindakan & alat</a></li>
             <li><a class="nav-link scrollto " href="#gizi">Gizi</a></li>
             <li><a class="nav-link scrollto" href="#info">Informasi lainnya</a></li>
+            <li><a class="nav-link scrollto" href="#cari"><i class="bi bi-search"></i> Cari...</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -62,137 +63,28 @@
                     Id, pariatur quas.</p>
             </div>
 
-            {{-- <div class="gallery">
-                <div class="image">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                    <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="penyakit" data-title="Caption1">
-                        <div class="content">
-                            <h4>Image Hover Effect</h4>
-                            <p>Deskripsi ditulis disini</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="image">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                    <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="penyakit" data-title="Caption1">
-                        <div class="content">
-                            <h4>Image Hover Effect</h4>
-                            <p>Deskripsi ditulis disini</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="image">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                    <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="penyakit" data-title="Caption1">
-                        <div class="content">
-                            <h4>Image Hover Effect</h4>
-                            <p>Deskripsi ditulis disini</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="image">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                    <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="penyakit" data-title="Caption1">
-                        <div class="content">
-                            <h4>Image Hover Effect</h4>
-                            <p>Deskripsi ditulis disini</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="image">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                    <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="penyakit" data-title="Caption1">
-                        <div class="content">
-                            <h4>Image Hover Effect</h4>
-                            <p>Deskripsi ditulis disini</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="image">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                    <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="penyakit" data-title="Caption1">
-                        <div class="content">
-                            <h4>Image Hover Effect</h4>
-                            <p>Deskripsi ditulis disini</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="image">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                    <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="penyakit" data-title="Caption1">
-                        <div class="content">
-                            <h4>Image Hover Effect</h4>
-                            <p>Deskripsi ditulis disini</p>
-                        </div>
-                    </a>
-                </div>
-            </div> --}}
+            <div class="card__container">
 
-            {{-- <div class="gallery">
-                <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="models" data-title="Caption1">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
+                @foreach($penyakit as $key => $isi)
+                <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
+                    data-title="{{ $isi->judul }}" class="card mx-2">
+                    <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path />
+                            </svg>
+                            <img class="card__thumb" src="{{ url('img/logo.png') }}" alt="" />
+                            <div class="card__header-text">
+                                <h3 class="card__title">{{ $isi->judul }}</h3>
+                                <span class="card__status">Lebih lanjut <i class='bx bx-chevrons-right'></i></span>
+                            </div>
+                        </div>
+                        <p class="card__description">{{ $isi->deskripsi }}</p>
+                    </div>
                 </a>
-                <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="models" data-title="Caption2">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                </a>
-                <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="models" data-title="Caption3">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                </a>
-                <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="models" data-title="Caption4">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                </a>
-                <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="models" data-title="Caption5">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                </a>
-                <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="models" data-title="Caption6">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                </a>
-                <a href="{{ url('img/penyakit.jpg') }}" data-lightbox="models" data-title="Caption7">
-                    <img src="{{ url('img/penyakit.jpg') }}" alt="">
-                </a>
-            </div> --}}
+                @endforeach
 
-            <div class=" swiper">
-                <div class="card__content">
-                    <ul class="cards swiper-wrapper">
-
-                        @foreach($penyakit as $key => $isi)
-                        <li class="swiper-slide">
-                            <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
-                                data-title="{{ $isi->judul }}" class="card">
-                                <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" />
-                                <div class="card__overlay">
-                                    <div class="card__header">
-                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                            <path />
-                                        </svg>
-                                        <img class="card__thumb" src="{{ url('img/logo.png') }}" alt="" />
-                                        <div class="card__header-text">
-                                            <h3 class="card__title">{{ $isi->judul }}</h3>
-                                            <span class="card__status">Lebih lanjut <i
-                                                    class='bx bx-chevrons-right'></i></span>
-                                        </div>
-                                    </div>
-                                    <p class="card__description">{{ $isi->deskripsi }}</p>
-                                </div>
-                            </a>
-                        </li>
-                        @endforeach
-
-                    </ul>
-                </div>
-
-                <!-- Navigation buttons -->
-                <div class="swiper-button-next">
-                    {{-- <i class='bx bxs-chevron-right'></i> --}}
-                </div>
-
-                <div class="swiper-button-prev">
-                    {{-- <i class='bx bxs-chevron-left'></i> --}}
-                </div>
-
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -207,47 +99,28 @@
                     Id, pariatur quas.</p>
             </div>
 
-            <div class=" swiper">
-                <div class="card__content">
-                    <ul class="cards swiper-wrapper">
+            <div class="card__container">
 
-                        @foreach($alat as $key => $isi)
-                        <li class="swiper-slide">
-                            <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
-                                data-title="{{ $isi->judul }}" class="card">
-                                <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" />
-                                <div class="card__overlay">
-                                    <div class="card__header">
-                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                            <path />
-                                        </svg>
-                                        <img class="card__thumb" src="{{ url('img/logo.png') }}" alt="" />
-                                        <div class="card__header-text">
-                                            <h3 class="card__title">{{ $isi->judul }}</h3>
-                                            <span class="card__status">Lebih lanjut <i
-                                                    class='bx bx-chevrons-right'></i></span>
-                                        </div>
-                                    </div>
-                                    <p class="card__description">{{ $isi->deskripsi }}</p>
-                                </div>
-                            </a>
-                        </li>
-                        @endforeach
+                @foreach($alat as $key => $isi)
+                <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
+                    data-title="{{ $isi->judul }}" class="card mx-2">
+                    <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path />
+                            </svg>
+                            <img class="card__thumb" src="{{ url('img/logo.png') }}" alt="" />
+                            <div class="card__header-text">
+                                <h3 class="card__title">{{ $isi->judul }}</h3>
+                                <span class="card__status">Lebih lanjut <i class='bx bx-chevrons-right'></i></span>
+                            </div>
+                        </div>
+                        <p class="card__description">{{ $isi->deskripsi }}</p>
+                    </div>
+                </a>
+                @endforeach
 
-                    </ul>
-                </div>
-
-                <!-- Navigation buttons -->
-                <div class="swiper-button-next">
-                    {{-- <i class='bx bxs-chevron-right'></i> --}}
-                </div>
-
-                <div class="swiper-button-prev">
-                    {{-- <i class='bx bxs-chevron-left'></i> --}}
-                </div>
-
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
             </div>
 
         </div>
@@ -263,47 +136,28 @@
                     Id, pariatur quas.</p>
             </div>
 
-            <div class=" swiper">
-                <div class="card__content">
-                    <ul class="cards swiper-wrapper">
+            <div class="card__container">
 
-                        @foreach($gizi as $key => $isi)
-                        <li class="swiper-slide">
-                            <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
-                                data-title="{{ $isi->judul }}" class="card">
-                                <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" />
-                                <div class="card__overlay">
-                                    <div class="card__header">
-                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                            <path />
-                                        </svg>
-                                        <img class="card__thumb" src="{{ url('img/logo.png') }}" alt="" />
-                                        <div class="card__header-text">
-                                            <h3 class="card__title">{{ $isi->judul }}</h3>
-                                            <span class="card__status">Lebih lanjut <i
-                                                    class='bx bx-chevrons-right'></i></span>
-                                        </div>
-                                    </div>
-                                    <p class="card__description">{{ $isi->deskripsi }}</p>
-                                </div>
-                            </a>
-                        </li>
-                        @endforeach
+                @foreach($gizi as $key => $isi)
+                <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
+                    data-title="{{ $isi->judul }}" class="card mx-2">
+                    <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path />
+                            </svg>
+                            <img class="card__thumb" src="{{ url('img/logo.png') }}" alt="" />
+                            <div class="card__header-text">
+                                <h3 class="card__title">{{ $isi->judul }}</h3>
+                                <span class="card__status">Lebih lanjut <i class='bx bx-chevrons-right'></i></span>
+                            </div>
+                        </div>
+                        <p class="card__description">{{ $isi->deskripsi }}</p>
+                    </div>
+                </a>
+                @endforeach
 
-                    </ul>
-                </div>
-
-                <!-- Navigation buttons -->
-                <div class="swiper-button-next">
-                    {{-- <i class='bx bxs-chevron-right'></i> --}}
-                </div>
-
-                <div class="swiper-button-prev">
-                    {{-- <i class='bx bxs-chevron-left'></i> --}}
-                </div>
-
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
             </div>
 
         </div>
@@ -319,47 +173,53 @@
                     Id, pariatur quas.</p>
             </div>
 
-            <div class=" swiper">
-                <div class="card__content">
-                    <ul class="cards swiper-wrapper">
+            <div class="card__container">
 
-                        @foreach($info as $key => $isi)
-                        <li class="swiper-slide">
-                            <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
-                                data-title="{{ $isi->judul }}" class="card">
-                                <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" />
-                                <div class="card__overlay">
-                                    <div class="card__header">
-                                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
-                                            <path />
-                                        </svg>
-                                        <img class="card__thumb" src="{{ url('img/logo.png') }}" alt="" />
-                                        <div class="card__header-text">
-                                            <h3 class="card__title">{{ $isi->judul }}</h3>
-                                            <span class="card__status">Lebih lanjut <i
-                                                    class='bx bx-chevrons-right'></i></span>
-                                        </div>
-                                    </div>
-                                    <p class="card__description">{{ $isi->deskripsi }}</p>
-                                </div>
-                            </a>
-                        </li>
-                        @endforeach
+                @foreach($info as $key => $isi)
+                <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
+                    data-title="{{ $isi->judul }}" class="card mx-2">
+                    <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" />
+                    <div class="card__overlay">
+                        <div class="card__header">
+                            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path />
+                            </svg>
+                            <img class="card__thumb" src="{{ url('img/logo.png') }}" alt="" />
+                            <div class="card__header-text">
+                                <h3 class="card__title">{{ $isi->judul }}</h3>
+                                <span class="card__status">Lebih lanjut <i class='bx bx-chevrons-right'></i></span>
+                            </div>
+                        </div>
+                        <p class="card__description">{{ $isi->deskripsi }}</p>
+                    </div>
+                </a>
+                @endforeach
 
-                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="cari" class="section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Pencarian</h2>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="mb-4 col-6">
+                    <div class="input-group rounded-pill" style="outline: 1px solid; outline-color: #004D40;">
+                        <div class="input-group-prepend border-0">
+                            <button class="btn btn-link text-success"><strong><i
+                                        class="fa fa-search text-success"></i></strong></button>
+                        </div>
+                        <input type="search" name="search" id="search" placeholder="Cari sesuatu disini"
+                            class="form-control bg-none border-0 text-success">
+                    </div>
                 </div>
+            </div>
 
-                <!-- Navigation buttons -->
-                <div class="swiper-button-next">
-                    {{-- <i class='bx bxs-chevron-right'></i> --}}
-                </div>
-
-                <div class="swiper-button-prev">
-                    {{-- <i class='bx bxs-chevron-left'></i> --}}
-                </div>
-
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
+            <div class="card__container" id="content">
             </div>
         </div>
     </section>
@@ -443,5 +303,29 @@
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
 <div id="preloader"></div>
+
+<script>
+    $('#search').on('keyup', function() {
+        $value = $(this).val();
+
+        // Memeriksa apakah $value kosong
+        if ($value === '') {
+        // Jika kosong, kosongkan konten atau lakukan tindakan sesuai kebutuhan
+        $('#content').html('');
+        return;
+        }
+
+        $.ajax({
+            type: 'GET',
+            url: '{{ URL::to('search') }}',
+            data: {'search':$value},
+
+            success: function(data) {
+                // console.log(data);
+                $('#content').html(data);
+            }
+        })
+    })
+</script>
 
 @endsection

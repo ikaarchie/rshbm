@@ -279,32 +279,3 @@ var typed = new Typed(".running-text", {
     backDelay: 100,
     loop: true
 });
-
-let swiperCards = new Swiper(".card__content", {
-    loop: true,
-    spaceBetween: 20,
-    grabCursor: true,
-
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-    },
-
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-        700: {
-            slidesPerView: 1,
-        },
-        990: {
-            slidesPerView: 2,
-        },
-        1100: {
-            slidesPerView: 3,
-        },
-    },
-});
