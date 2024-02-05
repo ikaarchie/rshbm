@@ -43,7 +43,7 @@ class HomeController extends Controller
 
         foreach ($search as $isi) {
             $output .=
-                "<a href=\"" . asset('gambar-konten/' . $isi->gambar) . "\" data-title=\"" . $isi->judul . "\" class=\"card mx-2\">
+                "<a href=\"" . asset('gambar-konten/' . $isi->gambar) . "\" data-lightbox=\"" . $isi->jenis . "\" data-title=\"" . $isi->judul . "\" class=\"card mx-2\">
                 <img src=\"" . asset('gambar-konten/' . $isi->gambar) . "\" class=\"card__image\" alt=\"\" />
                 <div class=\"card__overlay\">
                     <div class=\"card__header\">
