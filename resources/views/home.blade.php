@@ -58,9 +58,9 @@
 
             <div class="section-title">
                 <h2>Penyakit</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
+                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
                     inventore eveniet placeat quidem ipsam quod tempore porro autem alias eligendi eum, sequi ex.
-                    Id, pariatur quas.</p>
+                    Id, pariatur quas.</p> --}}
             </div>
 
             <div class="card__container">
@@ -94,9 +94,9 @@
 
             <div class="section-title">
                 <h2>Alat</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
+                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
                     inventore eveniet placeat quidem ipsam quod tempore porro autem alias eligendi eum, sequi ex.
-                    Id, pariatur quas.</p>
+                    Id, pariatur quas.</p> --}}
             </div>
 
             <div class="card__container">
@@ -131,9 +131,9 @@
 
             <div class="section-title">
                 <h2>Gizi</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
+                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
                     inventore eveniet placeat quidem ipsam quod tempore porro autem alias eligendi eum, sequi ex.
-                    Id, pariatur quas.</p>
+                    Id, pariatur quas.</p> --}}
             </div>
 
             <div class="card__container">
@@ -168,9 +168,9 @@
 
             <div class="section-title">
                 <h2>Informasi Lainnya</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
+                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
                     inventore eveniet placeat quidem ipsam quod tempore porro autem alias eligendi eum, sequi ex.
-                    Id, pariatur quas.</p>
+                    Id, pariatur quas.</p> --}}
             </div>
 
             <div class="card__container">
