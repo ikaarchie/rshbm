@@ -39,7 +39,7 @@ class HomeController extends Controller
     {
         $output = "";
 
-        $search = Konten::where('judul', 'like', '%' . $request->search . '%')->get();
+        $search = Konten::where('judul', 'like', "%" . $request->search . "%")->get();
 
         foreach ($search as $isi) {
             $output .=
