@@ -39,26 +39,34 @@ class HomeController extends Controller
     {
         $output = "";
 
-        $search = Konten::where('judul', 'like', "%" . $request->search . "%")->get();
+        // Periksa apakah input pencarian disediakan
+        if ($request->has('search')) {
+            $searchTerm = $request->input('search');
 
-        foreach ($search as $isi) {
-            $output .=
-                "<a href=\"" . asset('gambar-konten/' . $isi->gambar) . "\" data-lightbox=\"" . $isi->jenis . "\" data-title=\"" . $isi->judul . "\" class=\"card mx-2\">
-                <img src=\"" . asset('gambar-konten/' . $isi->gambar) . "\" class=\"card__image\" alt=\"\" />
-                <div class=\"card__overlay\">
-                    <div class=\"card__header\">
-                        <svg class=\"card__arc\" xmlns=\"http://www.w3.org/2000/svg\">
-                            <path />
-                        </svg>
-                        <img class=\"card__thumb\" src=\"" . url('img/logo.png') . "\" alt=\"\" />
-                        <div class=\"card__header-text\">
-                            <h3 class=\"card__title\">" . $isi->judul . "</h3>
-                            <span class=\"card__status\">Lebih lanjut <i class='bx bx-chevrons-right'></i></span>
+            // Gunakan istilah pencarian untuk melakukan kueri ke database
+            // $search = Konten::where('judul', 'like', "%" . $searchTerm . "%")->get();
+            $search = Konten::whereRaw('LOWER(judul) like ?', ["%$searchTerm%"])->get();
+
+            // Proses hasil pencarian
+            foreach ($search as $isi) {
+                $output .=
+                    "<a href=\"" . asset('gambar-konten/' . $isi->gambar) . "\" data-lightbox=\"" . $isi->jenis . "\" data-title=\"" . $isi->judul . "\" class=\"card mx-2\">
+                    <img src=\"" . asset('gambar-konten/' . $isi->gambar) . "\" class=\"card__image\" alt=\"\" />
+                    <div class=\"card__overlay\">
+                        <div class=\"card__header\">
+                            <svg class=\"card__arc\" xmlns=\"http://www.w3.org/2000/svg\">
+                                <path />
+                            </svg>
+                            <img class=\"card__thumb\" src=\"" . url('img/logo.png') . "\" alt=\"\" />
+                            <div class=\"card__header-text\">
+                                <h3 class=\"card__title\">" . $isi->judul . "</h3>
+                                <span class=\"card__status\">Lebih lanjut <i class='bx bx-chevrons-right'></i></span>
+                            </div>
                         </div>
+                        <p class=\"card__description\">" . $isi->deskripsi . "</p>
                     </div>
-                    <p class=\"card__description\">" . $isi->deskripsi . "</p>
-                </div>
-            </a>";
+                </a>";
+            }
         }
 
         return response($output);
