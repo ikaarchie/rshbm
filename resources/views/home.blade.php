@@ -14,7 +14,7 @@
             <li><a class="nav-link scrollto" href="#alat">Tindakan & alat</a></li>
             <li><a class="nav-link scrollto " href="#gizi">Gizi</a></li>
             <li><a class="nav-link scrollto" href="#info">Informasi lainnya</a></li>
-            <li><a class="nav-link scrollto" href="#cari"><i class="bi bi-search"></i> Cari...</a></li>
+            <li><a class="nav-link scrollto" href="#cari">Pencarian</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -32,9 +32,9 @@
 
                 <div class="home-sci">
                     <a href="#" style="--i:1"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://www.instagram.com/rsuherminabanyumanik/" style="--i:2"><i
+                    <a href="https://www.instagram.com/rsuherminabanyumanik/" target="_blank" style="--i:2"><i
                             class='bx bxl-instagram'></i></a>
-                    <a href="https://www.tiktok.com/@rsuherminabanyumanik" style="--i:3"><i
+                    <a href="https://www.tiktok.com/@rsuherminabanyumanik" target="_blank" style="--i:3"><i
                             class='bx bxl-tiktok'></i></a>
                 </div>
 
@@ -291,9 +291,10 @@
 
             <div class="social-links text-center text-md-right pt-3 pt-md-0">
                 <a href="#" class="facebook"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/rsuherminabanyumanik/" class="instagram"><i
+                <a href="https://www.instagram.com/rsuherminabanyumanik/" target="_blank" class="instagram"><i
                         class='bx bxl-instagram'></i></a>
-                <a href="https://www.tiktok.com/@rsuherminabanyumanik" class="tiktok"><i class='bx bxl-tiktok'></i></a>
+                <a href="https://www.tiktok.com/@rsuherminabanyumanik" target="_blank" class="tiktok"><i
+                        class='bx bxl-tiktok'></i></a>
             </div>
         </div>
 
@@ -305,27 +306,24 @@
 <div id="preloader"></div>
 
 <script>
-    $('#search').on('keyup', function() {
-        $value = $(this).val();
+    $('#search').on('input', function() {
+        var $value = $(this).val().trim();
 
-        // Memeriksa apakah $value kosong
-        if ($value === '') {
-        // Jika kosong, kosongkan konten atau lakukan tindakan sesuai kebutuhan
-        $('#content').html('');
-        return;
+        // Memeriksa apakah $value tidak kosong
+        if ($value !== '') {
+            $.ajax({
+                type: 'GET',
+                url: '{{ URL::to('search') }}',
+                data: {'search': $value},
+                success: function(data) {
+                    $('#content').html(data);
+                }
+            });
+        } else {
+            // Jika kosong, kosongkan konten atau lakukan tindakan sesuai kebutuhan
+            $('#content').html('');
         }
-
-        $.ajax({
-            type: 'GET',
-            url: '{{ URL::to('search') }}',
-            data: {'search':$value},
-
-            success: function(data) {
-                // console.log(data);
-                $('#content').html(data);
-            }
-        })
-    })
+    });
 </script>
 
 @endsection

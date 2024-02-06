@@ -6,18 +6,18 @@
     <div class="d-md-flex justify-content-between">
         <div class="gap-1 d-md-flex justify-content-md-start mt-2">
             <button type="button" data-bs-toggle="modal" data-bs-target="#tambah" class="btn"
-                style="background-color: #FFAB00;">
-                <i class="fa-solid fa-plus"></i><b> Tambah Data</b>
+                style="background-color: #004D40;">
+                <b class="text-light"><i class="fa-solid fa-plus"></i> Tambah Data</b>
             </button>
         </div>
 
         <div class="gap-1 d-md-flex justify-content-md-end mt-2">
             <div class="form-group w-10">
                 <div class="input-group">
-                    <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #FFAB00;"
+                    <input type="text" class="form-control" style="outline: 0.5px solid; outline-color: #004D40;"
                         id="myInput" onkeyup="cari()" placeholder="Cari Judul">
-                    <span class="input-group-text"
-                        style="outline: 0.5px solid; outline-color: #FFAB00; background-color: #FFAB00;">
+                    <span class="input-group-text text-light"
+                        style="outline: 0.5px solid; outline-color: #004D40; background-color: #004D40;">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </span>
                 </div>
@@ -26,9 +26,9 @@
     </div>
 
     <div class="table-responsive mt-1 table-data tbl-fixed">
-        <table class="table table-bordered border-dark align-middle w-100" id="myTable">
-            <thead class="sticky text-dark text-center align-middle">
-                <tr>
+        <table class="table table-bordered align-middle w-100" id="myTable">
+            <thead>
+                <tr class="sticky text-light text-center">
                     <th style="width:1%">No</th>
                     <th style="width:15%">Jenis</th>
                     <th>Judul</th>
@@ -69,7 +69,7 @@
             </tbody>
         </table>
 
-        <div class="btn-toolbar justify-content-between">
+        {{-- <div class="btn-toolbar justify-content-between">
             <div>
                 Menampilkan
                 {{ $konten->firstItem() }} - {{ $konten->lastItem() }}
@@ -80,7 +80,7 @@
             <div>
                 {{ $konten->links() }}
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 @include('konten.add')
