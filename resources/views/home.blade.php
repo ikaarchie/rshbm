@@ -58,9 +58,10 @@
 
             <div class="section-title">
                 <h2>Penyakit</h2>
-                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
-                    inventore eveniet placeat quidem ipsam quod tempore porro autem alias eligendi eum, sequi ex.
-                    Id, pariatur quas.</p> --}}
+                <p>Penyakit adalah suatu kondisi yang mengganggu fungsi normal tubuh, menyebabkan gejala dan
+                    ketidaknyamanan. Penyakit dapat disebabkan oleh berbagai faktor, termasuk infeksi, genetika, gaya
+                    hidup tidak sehat, paparan lingkungan, dan faktor lainnya. Mereka dapat bersifat akut atau kronis,
+                    ringan atau parah.</p>
             </div>
 
             <div class="card__container">
@@ -94,9 +95,12 @@
 
             <div class="section-title">
                 <h2>Alat</h2>
-                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
-                    inventore eveniet placeat quidem ipsam quod tempore porro autem alias eligendi eum, sequi ex.
-                    Id, pariatur quas.</p> --}}
+                <p>Penggunaan alat kesehatan mencakup berbagai disiplin ilmu seperti kedokteran, perawatan intensif,
+                    radiologi, dan bedah.
+                    Penting untuk memahami dan menggunakan alat kesehatan dengan benar guna memberikan perawatan yang
+                    tepat dan aman bagi
+                    pasien. Standar keamanan, sterilisasi, dan kalibrasi alat kesehatan juga <br>
+                    merupakan bagian integral dari penggunaan yang efektif dalam praktik kesehatan.</p>
             </div>
 
             <div class="card__container">
@@ -131,9 +135,11 @@
 
             <div class="section-title">
                 <h2>Gizi</h2>
-                {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente beatae voluptatum aliquid
-                    inventore eveniet placeat quidem ipsam quod tempore porro autem alias eligendi eum, sequi ex.
-                    Id, pariatur quas.</p> --}}
+                <p>Pola makan seimbang, yang mencakup berbagai jenis makanan dan nutrisi, sangat penting untuk menjaga
+                    keseimbangan gizi. <br>
+                    Kekurangan atau kelebihan nutrisi dapat menyebabkan masalah kesehatan. Pendidikan gizi, pemilihan
+                    makanan yang tepat, dan kesadaran akan kebutuhan nutrisi individu adalah kunci untuk mencapai
+                    kesehatan optimal.</p>
             </div>
 
             <div class="card__container">
