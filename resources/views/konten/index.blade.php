@@ -26,9 +26,9 @@
     </div>
 
     <div class="table-responsive mt-1 table-data tbl-fixed">
-        <table class="table table-bordered align-middle w-100" id="myTable">
-            <thead>
-                <tr class="sticky text-light text-center">
+        <table class="table table-bordered border-dark align-middle w-100" id="myTable">
+            <thead class="sticky text-light text-center align-middle">
+                <tr>
                     <th style="width:1%">No</th>
                     <th style="width:15%">Jenis</th>
                     <th>Judul</th>

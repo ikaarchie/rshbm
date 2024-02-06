@@ -17,7 +17,7 @@ class KontenController extends Controller
 
     public function getData()
     {
-        $konten = Konten::latest('id')->paginate(10);
+        $konten = Konten::latest('id')->paginate(1000);
 
         return view('konten.index')->with('konten', $konten);
     }
