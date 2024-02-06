@@ -17,19 +17,19 @@ class HomeController extends Controller
         $konten = Konten::all();
 
         $gizi = Konten::where('jenis', 'Gizi')
-            ->latest('id')
+            ->orderBy('judul', 'asc')
             ->get();
 
         $info = Konten::where('jenis', 'Informasi lainnya')
-            ->latest('id')
+            ->orderBy('judul', 'asc')
             ->get();
 
         $penyakit = Konten::where('jenis', 'Penyakit')
-            ->latest('id')
+            ->orderBy('judul', 'asc')
             ->get();
 
         $alat = Konten::where('jenis', 'Tindakan dan Alat')
-            ->latest('id')
+            ->orderBy('judul', 'asc')
             ->get();
 
         return view('home', compact('konten', 'gizi', 'info', 'penyakit', 'alat'));
