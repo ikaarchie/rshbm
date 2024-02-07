@@ -33,7 +33,9 @@
     border-radius: calc(40 * 1px);
     overflow: hidden;
     text-decoration: none;
-    margin: 0 .5rem 0 .5rem;
+    margin: .5rem;
+    box-shadow: 0 0px 10px rgba(0, 77, 64, 0.5);
+    border: 1px solid rgba(67, 160, 71, 0.5);
 }
 
 .card__image {
@@ -135,7 +137,7 @@
         max-height: 25vh;
         max-width: 25vh;
         border-radius: calc(25 * 1px);
-        margin: 0 .2rem 0 .2rem;
+        margin: .2rem;
     }
 
     .card__thumb {
@@ -165,7 +167,7 @@
         max-height: 30vh;
         max-width: 30vh;
         border-radius: calc(30 * 1px);
-        margin: 0 .3rem 0 .3rem;
+        margin: .3rem;
     }
 
     .card__thumb {
@@ -196,7 +198,7 @@
         max-height: 35vh;
         max-width: 35vh;
         border-radius: calc(35 * 1px);
-        margin: 0 .4rem 0 .4rem;
+        margin: .4rem;
     }
 
     .card__thumb {
@@ -227,7 +229,7 @@
         max-height: 40vh;
         max-width: 40vh;
         border-radius: calc(40 * 1px);
-        margin: 0 .5rem 0 .5rem;
+        margin: .5rem;
     }
 
     .card__thumb {
