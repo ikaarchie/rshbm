@@ -69,7 +69,7 @@
                 @foreach($penyakit as $key => $isi)
                 <a href="{{ asset('gambar-konten/'.$isi->gambar) }}" data-lightbox="{{ $isi->jenis }}"
                     data-title="{{ $isi->judul }}" class="card mx-2">
-                    <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" />
+                    <img src="{{ asset('gambar-konten/'.$isi->gambar) }}" class="card__image" alt="" loading="lazy" />
                     <div class="card__overlay">
                         <div class="card__header">
                             <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
