@@ -39,7 +39,7 @@
                 </div>
 
                 <div>
-                    <a href="#penyakit" class="btn-get-started scrollto">Get Started</a>
+                    <a href="#penyakit" class="btn-get-started scrollto">Mulai Sekarang</a>
                 </div>
             </div>
 

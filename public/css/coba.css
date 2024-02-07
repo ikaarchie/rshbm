@@ -251,8 +251,9 @@
 .sticky {
     position: sticky;
     top: 0px;
+    background: #004D40;
     background-color: #004D40;
-    color: white;
+    color: #004D40;
 }
 
 /* hide scrollbar for chrome, safari, opera */
