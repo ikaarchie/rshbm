@@ -94,7 +94,7 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Alat</h2>
+                <h2>Tindakan & Alat</h2>
                 <p>Penggunaan alat kesehatan mencakup berbagai disiplin ilmu seperti kedokteran, perawatan intensif,
                     radiologi, dan bedah.
                     Penting untuk memahami dan menggunakan alat kesehatan dengan benar guna memberikan perawatan yang
