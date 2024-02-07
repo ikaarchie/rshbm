@@ -33,6 +33,7 @@
     border-radius: calc(40 * 1px);
     overflow: hidden;
     text-decoration: none;
+    margin: 0 .5rem 0 .5rem;
 }
 
 .card__image {
@@ -134,6 +135,7 @@
         max-height: 25vh;
         max-width: 25vh;
         border-radius: calc(25 * 1px);
+        margin: 0 .2rem 0 .2rem;
     }
 
     .card__thumb {
@@ -163,6 +165,7 @@
         max-height: 30vh;
         max-width: 30vh;
         border-radius: calc(30 * 1px);
+        margin: 0 .3rem 0 .3rem;
     }
 
     .card__thumb {
@@ -193,6 +196,7 @@
         max-height: 35vh;
         max-width: 35vh;
         border-radius: calc(35 * 1px);
+        margin: 0 .4rem 0 .4rem;
     }
 
     .card__thumb {
@@ -223,6 +227,7 @@
         max-height: 40vh;
         max-width: 40vh;
         border-radius: calc(40 * 1px);
+        margin: 0 .5rem 0 .5rem;
     }
 
     .card__thumb {
